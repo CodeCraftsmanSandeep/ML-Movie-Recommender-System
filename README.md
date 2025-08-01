@@ -11,7 +11,7 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
 ## Table Of contents
 | S.No | Heading | What it conveys? |
 |:---|:--|:--|
-| 1 | [Introduction](#introduction)| Recommender systems, ML |
+| 1 | [Introduction](#introduction)| Introduces recommender systems, ML concepts |
 
 ## Introduction
 
@@ -34,3 +34,9 @@ graph TD;
     ML-Model--> Web-Dev;
     Web-Dev--> Deploy;
 ```
+
+## Citations
+- [English stop words](https://gist.github.com/sebleier/554280)
+- [YouTube tutorial](https://www.youtube.com/watch?v=1xtrIEwY_zY&t=1s)
+- [ProtoBuf documentation](https://protobuf.dev/)
+- [Bag of Words (BoW) Model](https://en.wikipedia.org/wiki/Bag-of-words_model)
