@@ -4,13 +4,14 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
 ## Repository Structure
 ```
 ├── readme.md         # Must read to understand what is done
-├── LICENSE           #  Permissions
+├── LICENSE           # Permissions
 ├── 
 ```
 
 ## Table Of contents
-| | | 
-|:---|:--|
+| S.No | Heading | What it conveys? |
+|:---|:--|:--|
+| 1 | [Introduction](#introduction)| Recommender systems, ML |
 
 ## Introduction
 
@@ -23,4 +24,13 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
     - Example: Based on history if A and B has high similarity, then if A watched something new then the new stuff can be recommended to B
 3) Hybrid
 
-## This Project
+### This Project
+This repo builds **Content Based Movie Recommender System** using Machine Learning, which is cool😎!! The techniques used in here, can be used else where from document retreival to ecommerce development, from search engine to social media content.
+
+```mermaid
+graph TD;
+    Data-->Preprocessing;
+    Preprocessing-->ML-Model;
+    ML-Model--> Web-Dev;
+    Web-Dev--> Deploy;
+```
