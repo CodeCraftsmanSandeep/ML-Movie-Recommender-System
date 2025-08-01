@@ -3,15 +3,14 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
 
 ## Repository Structure
 ```
-|- readme.md
-|- LICENSE
-|- 
+├── readme.md         # Must read to understand what is done
+├── LICENSE           #  Permissions
+├── 
 ```
 
 ## Table Of contents
 | | | 
 |:---|:--|
-| 
 
 ## Introduction
 
