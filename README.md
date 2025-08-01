@@ -2,7 +2,11 @@
 Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System based on Machine Learning (ML). You will get to see i) Data processing ii) ML (⊂ AI) techniques iii) Web development iv) Deployment, its a lot of work👷🏻! Enjoy your walk👣 through the repo, Feel free to raise PR if you think we can improve.
 
 ## Repository Structure
-
+```
+|- readme.md
+|- LICENSE
+|- 
+```
 
 ## Table Of contents
 | | | 
