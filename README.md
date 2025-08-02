@@ -3,7 +3,7 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
 
 ## Keywords / Tags
 - ```Python```
-    - ```numpy``` ```pandas``` ```sklearn``` ```nltk```
+    - ```numpy``` ```pandas``` ```sklearn``` ```nltk``` ```joblib``` ```streamlit``` ```requests```
 - ```Data Pre-processing```
     - ```Missing Value Handling``` ```Duplicate Removal``` ```Data Cleaning```
 - ```Machine Learning```
@@ -58,6 +58,18 @@ Does useful recommendations for user. Like when you are seeing about tomato you 
     | Range                  | \[0, ∞)                       | \[-1, 1] (or \[0, 1] if non-negative) |
     | Problem in high-dim    | Curse of dimensionality       | Robust in high-dimensional space      |
 
+## Web dev
+
+- Vertification of HTTPS requests:
+    - When you visit a website (or) hit API over HTTPS, your system usually verifies SSL certificate to ensure:
+        - You are talking to the real website (not a spoofed one)
+        - Your data is encrypted and trusted 
+    - If you disable (or) skip verification you risk
+        - Man-in-the-middle attacks
+        - Data leaks
+- DNS resolving:
+    - When you try to request to a domain, the DNS lookup happen to send the request to right server
+    - I used google DNS lookup in this project which worked for the TMDB API hit. (My default DNS lookup did not work, so I switched to google DNS, nice thing to learn!!)
 
 ## This Project
 This repo builds **Content Based Movie Recommender System** using Machine Learning, which is cool😎!! The techniques used in here, can be used else where from document retreival to ecommerce development, from search engine to social media content.
