@@ -1,11 +1,20 @@
 # ML-Movie-Recommender-System
 Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System based on Machine Learning (ML). You will get to see i) Data processing ii) ML (⊂ AI) techniques iii) Web development iv) Deployment, its a lot of work👷🏻! Enjoy your walk👣 through the repo, Feel free to raise PR if you think we can improve.
 
+## Keywords / Tags
+- ```Python```
+    - ```numpy``` ```pandas``` ```sklearn``` ```nltk```
+- ```Data Pre-processing```
+    - ```Missing Value Handling``` ```Duplicate Removal``` ```Data Cleaning```
+- ```Machine Learning```
+    - ```Cosine Similarity``` ```Bag of Words(BoW) model``` ```Feature Extraction``` ```Feature Selection``` 
+- ```Recommender Systems```
+    - ```Content-based``` ```Collaborative Filtering```
+
 ## Repository Structure
 ```
 ├── readme.md         # Must read to understand what is done
 ├── LICENSE           # Permissions
-├── 
 ```
 
 ## Table Of contents
@@ -13,6 +22,8 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
 |:---|:--|:--|
 | 1 | [Introduction](#introduction)| Introduces recommender systems, ML concepts |
 
+## Recommender Systems
+Does useful recommendations for user. Like when you are seeing about tomato you should not get items like mosquito net. 🚨
 
 ### Types Of Recommender Systems
 1) Content based
@@ -36,7 +47,17 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
         - Choosing useful features.
         - Because there could be lot of unnnessary (or) irrelevant features, so you will have to choose relavant ones. 
 
-### This Project
+- To get how close the vectors are (when to use Euclidian distance and when to use Cosine similarity??):
+    | Feature | Euclidean Distance| Cosine Similarity|
+    |:----------------------|:--|:--|
+    | Measures               | Absolute distance (magnitude) | Angle (direction)                     |
+    | Sensitive to magnitude | ✅ Yes                         | ❌ No                                  |
+    | Works well with        | Low-dim, dense data  (e.g, Image pixels)         | High-dim, sparse data (e.g., NLP)     |
+    | Range                  | \[0, ∞)                       | \[-1, 1] (or \[0, 1] if non-negative) |
+    | Problem in high-dim    | Curse of dimensionality       | Robust in high-dimensional space      |
+
+
+## This Project
 This repo builds **Content Based Movie Recommender System** using Machine Learning, which is cool😎!! The techniques used in here, can be used else where from document retreival to ecommerce development, from search engine to social media content.
 
 ```mermaid
