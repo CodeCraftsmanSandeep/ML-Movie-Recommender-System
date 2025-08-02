@@ -17,10 +17,12 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
 ├── LICENSE           # Permissions
 ```
 
-## Table Of contents
+## Table of Contents
 | S.No | Heading | What it conveys? |
 |:---|:--|:--|
-| 1 | [Introduction](#introduction)| Introduces recommender systems, ML concepts |
+| 1 | [Recommender Systems](#recommender-systems)| Introduces recommender systems |
+| 2 | [Meachine Learning (ML)](#machine-learning-ml-) | Relevant ML concepts |
+
 
 ## Recommender Systems
 Does useful recommendations for user. Like when you are seeing about tomato you should not get items like mosquito net. 🚨
