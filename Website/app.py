@@ -17,7 +17,7 @@ similarity_path = os.path.abspath(os.path.join(current_dir, "..", "Output-data",
 movies_path     = os.path.abspath(os.path.join(current_dir, "..", "Output-data", "movies.joblib")) 
 
 # If joblib files are missing, run the notebook
-if not os.path.exists(similarity_path) or not os.path.exists(movies_path):
+if True or not os.path.exists(similarity_path) or not os.path.exists(movies_path):
     st.warning("🔍 ML results not found. Running the model to generate required data...")
 
     import nbformat
