@@ -3,12 +3,38 @@ import joblib
 import numpy as np
 import pandas as pd
 import requests
+import os
 
-# This is the ML model result
+st.write("""
+# Machine Learning Movie Recommender System (ML-MRS)
+    This is a movie recommender system built using Machine Learning techniques!   
+""")
+
+# This are the ML model result
+similarity_path = "../Output-data/similarity.joblib"
+movies_path     = "../Output-data/movies.joblib"
+
+# If joblib files are missing, run the notebook
+if not os.path.exists(similarity_path) or not os.path.exists(movies_path):
+    st.warning("🔍 ML results not found. Running the model to generate required data...")
+
+    import nbformat
+    from nbconvert.preprocessors import ExecutePreprocessor
+
+    with open("../ML-model/code.ipynb") as f:
+        nb = nbformat.read(f, as_version=4)
+
+    ep = ExecutePreprocessor(timeout=600, kernel_name='python3')
+    ep.preprocess(nb, {'metadata': {'path': '../ML-model'}})
+    
+    st.success("✅ Model run complete! Results are now available.")
+else:
+    st.info("📦 ML model results already available — loading from disk.")
+
 similarity  = joblib.load('../Output-data/similarity.joblib') 
 
 # Movies
-movies      = joblib.load('../Output-data/movies.joblib')
+movies      = joblib.load(movies_path)
 
 # Number of recommended movies
 top_movies_count = 5
@@ -38,10 +64,7 @@ def fetch_poster(movie_id):
         return complete_poster_path
 
 
-st.write("""
-# Machine Learning Movie Recommender System (ML-MRS)
-    This is a movie recommender system built using Machine Learning techniques!   
-""")
+
 
 selected_movie_title = st.selectbox("Search for your favorite movie", movies['title'])
 
