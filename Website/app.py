@@ -38,11 +38,6 @@ similarity  = joblib.load(similarity_path)
 # Movies
 movies      = joblib.load(movies_path)
 
-st.write(similarity[:5][:10])
-
-st.write(movies.head())
-
-
 # Number of recommended movies
 top_movies_count = 5
 
@@ -82,7 +77,7 @@ if st.button('Search'):
 
     single_column                       = st.columns(1)[0]
     with single_column:
-        movie_id                        = movies[movies['title'] == selected_movie_title]['id'][0]
+        movie_id                        = int(movies[movies['title'] == selected_movie_title]['id'])
         poster                          = fetch_poster(movie_id)
         st.image(poster, width = 200)
         st.markdown( f"<div style= 'font-weight: bold; height: 3em;'>{selected_movie_title}</div>",
