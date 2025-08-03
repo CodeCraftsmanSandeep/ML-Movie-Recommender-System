@@ -42,10 +42,14 @@ movies      = joblib.load(movies_path)
 top_movies_count = 5
 
 # TMDB api key
-tmdb_api_key = ''
-tmdb_key_path = os.path.abspath(os.path.join(current_dir, "..", "keys", "tmdb.key"))
-with open(tmdb_key_path) as key_file:
-    tmdb_api_key = key_file.readline()
+# tmdb_api_key = ''
+# tmdb_key_path = os.path.abspath(os.path.join(current_dir, "..", "keys", "tmdb.key"))
+# with open(tmdb_key_path) as key_file:
+#     tmdb_api_key = key_file.readline()
+
+tmdb_api_key = os.getenv("TMDB_API_KEY")
+if tmdb_api_key is None:
+    raise ValueError("TMDB_API_KEY environment variable not set")
 
 # Recommend top 5 movies based on the similarity
 def recommend(movie):
@@ -65,10 +69,7 @@ def fetch_poster(movie_id):
         relative_poster_path = data['poster_path']
         complete_poster_path = "https://image.tmdb.org/t/p/original" + relative_poster_path
         return complete_poster_path
-
-
-
-
+    
 selected_movie_title = st.selectbox("Search for your favorite movie", movies['title'])
 
 if st.button('Search'):
