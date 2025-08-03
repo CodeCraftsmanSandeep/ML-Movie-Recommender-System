@@ -31,7 +31,7 @@ if not os.path.exists(similarity_path) or not os.path.exists(movies_path):
     
     st.success("✅ Model run complete! Results are now available.")
 else:
-    st.info("📦 ML model results already available — loading from disk.")
+    st.info("📦 ML model trained on database is ready.")
 
 similarity  = joblib.load(similarity_path) 
 
