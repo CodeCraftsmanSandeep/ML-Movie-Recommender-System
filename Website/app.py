@@ -43,7 +43,8 @@ top_movies_count = 5
 
 # TMDB api key
 tmdb_api_key = ''
-with open('../keys/tmdb.key') as key_file:
+tmdb_key_path = os.path.abspath(os.path.join(current_dir, "..", "keys", "tmdb.key"))
+with open(tmdb_key_path) as key_file:
     tmdb_api_key = key_file.readline()
 
 # Recommend top 5 movies based on the similarity
