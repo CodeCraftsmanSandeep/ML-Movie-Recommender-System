@@ -10,9 +10,11 @@ st.write("""
     This is a movie recommender system built using Machine Learning techniques!   
 """)
 
+current_dir = os.path.dirname(__file__)
+
 # This are the ML model result
-similarity_path = "../Output-data/similarity.joblib"
-movies_path     = "../Output-data/movies.joblib"
+similarity_path = os.path.abspath(os.path.join(current_dir, "..", "Output-data", "similarity.joblib")) 
+movies_path     = os.path.abspath(os.path.join(current_dir, "..", "Output-data", "movies.joblib")) 
 
 # If joblib files are missing, run the notebook
 if not os.path.exists(similarity_path) or not os.path.exists(movies_path):
@@ -21,17 +23,17 @@ if not os.path.exists(similarity_path) or not os.path.exists(movies_path):
     import nbformat
     from nbconvert.preprocessors import ExecutePreprocessor
 
-    with open("../ML-model/code.ipynb") as f:
+    with open(os.path.abspath(os.path.join(current_dir, "..", "ML-model", "code.ipynb"))) as f:
         nb = nbformat.read(f, as_version=4)
 
     ep = ExecutePreprocessor(timeout=600, kernel_name='python3')
-    ep.preprocess(nb, {'metadata': {'path': '../ML-model'}})
+    ep.preprocess(nb, {'metadata': {'path': os.path.abspath(os.path.join(current_dir, "..", "ML-model"))}})
     
     st.success("✅ Model run complete! Results are now available.")
 else:
     st.info("📦 ML model results already available — loading from disk.")
 
-similarity  = joblib.load('../Output-data/similarity.joblib') 
+similarity  = joblib.load(similarity_path) 
 
 # Movies
 movies      = joblib.load(movies_path)
