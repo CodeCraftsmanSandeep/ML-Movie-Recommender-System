@@ -17,7 +17,7 @@ similarity_path = os.path.abspath(os.path.join(current_dir, "..", "Output-data",
 movies_path     = os.path.abspath(os.path.join(current_dir, "..", "Output-data", "movies.joblib")) 
 
 # If joblib files are missing, run the notebook
-if True or not os.path.exists(similarity_path) or not os.path.exists(movies_path):
+if not os.path.exists(similarity_path) or not os.path.exists(movies_path):
     st.warning("🔍 ML results not found. Running the model to generate required data...")
 
     import nbformat
@@ -37,6 +37,11 @@ similarity  = joblib.load(similarity_path)
 
 # Movies
 movies      = joblib.load(movies_path)
+
+st.write(similarity.head())
+
+st.write(movies.head())
+
 
 # Number of recommended movies
 top_movies_count = 5
