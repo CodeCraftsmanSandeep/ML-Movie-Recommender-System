@@ -79,7 +79,7 @@ if st.button('Search'):
     with single_column:
         movie_id                        = movies[movies['title'] == selected_movie_title]['id'].iloc[0]
         poster                          = fetch_poster(movie_id)
-        
+
         # Wrap both image and title in a centered div
         st.markdown(
             f"""
@@ -101,17 +101,12 @@ if st.button('Search'):
             movie_id = movies.iloc[recommended_movies_df_indices[i]]['id']
             poster = fetch_poster(movie_id)
 
-            # Image with fixed size
-            st.image(poster, width=150)
-
-            # Center-aligned, fixed-width title
             st.markdown(
                 f"""
-                <div style='
-                    text-align: center;
-                    font-weight: bold;
-                    word-wrap: break-word;
-                '>{movie_name}</div>
+                <div style='text-align: center;'>
+                    <img src="{poster}" width="200"><br>
+                    <div style='font-weight: bold; font-size: 18px; margin-top: 10px;'>{movie_name}</div>
+                </div>
                 """,
                 unsafe_allow_html=True
             )
