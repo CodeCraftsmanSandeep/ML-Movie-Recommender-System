@@ -38,7 +38,7 @@ similarity  = joblib.load(similarity_path)
 # Movies
 movies      = joblib.load(movies_path)
 
-st.write(similarity.head())
+st.write(similarity[:5][:10])
 
 st.write(movies.head())
 
