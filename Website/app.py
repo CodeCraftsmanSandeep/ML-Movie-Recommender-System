@@ -77,11 +77,18 @@ if st.button('Search'):
 
     single_column                       = st.columns(1)[0]
     with single_column:
-        movie_id                        = int(movies[movies['title'] == selected_movie_title]['id'])
+        movie_id                        = movies[movies['title'] == selected_movie_title]['id'].iloc[0]
         poster                          = fetch_poster(movie_id)
-        st.image(poster, width = 200)
-        st.markdown( f"<div style= 'font-weight: bold; height: 3em;'>{selected_movie_title}</div>",
-                unsafe_allow_html=True
+        
+        # Wrap both image and title in a centered div
+        st.markdown(
+            f"""
+            <div style='text-align: center;'>
+                <img src="{poster}" width="200"><br>
+                <div style='font-weight: bold; font-size: 18px; margin-top: 10px;'>{selected_movie_title}</div>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
 
     st.write("Movies you may like 🩷")
