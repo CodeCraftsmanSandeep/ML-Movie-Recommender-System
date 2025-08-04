@@ -7,7 +7,7 @@ import os
 
 st.write("""
 # Machine Learning Movie Recommender System (ML-MRS)
-    This is a movie recommender system built using ☕ coffee and 🤖 machine learning techniques!
+This is a movie recommender system built using ☕ coffee and 🤖 machine learning techniques!
 """)
 
 current_dir = os.path.dirname(__file__)
