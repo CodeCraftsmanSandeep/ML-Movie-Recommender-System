@@ -1,7 +1,7 @@
 # ML-Movie-Recommender-System
 Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System based on Machine Learning (ML). You will get to see i) Data processing ii) ML (⊂ AI) techniques iii) Web development iv) Deployment, its a lot of work👷🏻! Enjoy your walk👣 through the repo, Feel free to raise PR if you think we can improve.
 
-## Keywords / Tags
+## What's Inside
 - ```Python```
     - ```numpy``` ```pandas``` ```sklearn``` ```nltk``` ```joblib``` ```streamlit``` ```requests```
 - ```Data Pre-processing```
@@ -13,7 +13,11 @@ Hey there 🙋🏻‍♂️!! This repo contains my Movie Recommender System bas
 
 ## Repository Structure
 ```
-├── readme.md         # Must read to understand what is done
+├── assets/           # Contains related images
+├── Input-data/       # Contains data set downloaded from kaggle
+├── ML-model/         # Contains Python code for Data Processing and ML model development
+├── Output-data/      # Contains output from ML model
+├── README.md         # Must read to understand what is done
 ├── LICENSE           # Permissions
 ```
 
